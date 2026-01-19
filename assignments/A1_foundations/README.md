@@ -1,0 +1,23 @@
+# Assignment 1: Foundations of NLP
+
+This assignment covers tokenization, n-gram language models, smoothing, and evaluation with cross-entropy and perplexity.
+
+## Usage
+
+From the repository root:
+
+```bash
+./setup_conda.sh
+python -m nltk.downloader punkt punkt_tab gutenberg
+python -m assignments.A1_foundations.src.run_all --help
+python -m assignments.A1_foundations.src.run_all
+```
+
+If you prefer a venv instead of conda, follow the root `README.md` setup steps.
+
+## Expected Outputs
+
+Outputs are written to `assignments/A1_foundations/outputs/`:
+
+- `stats.json` and `stats_summary.md` for corpus statistics
+- `results.json`, `results.md`, and `results.csv` for model evaluation
