@@ -3,6 +3,7 @@ from collections import Counter
 from typing import Dict, List, Tuple
 
 import nltk
+from nltk.tokenize import WordPunctTokenizer
 
 BOUNDARY_TOKENS = {".", "!", "?"}
 
@@ -15,8 +16,11 @@ def tokenize_text(text: str) -> List[str]:
     try:
         raw_tokens = nltk.word_tokenize(text.lower())
     except LookupError:
-        print("NLTK tokenizer not found. Please run: python -m nltk.downloader punkt")
-        return []
+        print(
+            "NLTK tokenizer data not found; falling back to WordPunctTokenizer. "
+            "To use punkt, run: python -m nltk.downloader punkt punkt_tab"
+        )
+        raw_tokens = WordPunctTokenizer().tokenize(text.lower())
     tokens: List[str] = []
     for tok in raw_tokens:
         if all(ch in string.punctuation for ch in tok):

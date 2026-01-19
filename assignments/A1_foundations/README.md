@@ -7,9 +7,13 @@ This assignment covers tokenization, n-gram language models, smoothing, and eval
 From the repository root:
 
 ```bash
+./setup_conda.sh
+python -m nltk.downloader punkt punkt_tab gutenberg
 python -m assignments.A1_foundations.src.run_all --help
 python -m assignments.A1_foundations.src.run_all
 ```
+
+If you prefer a venv instead of conda, follow the root `README.md` setup steps.
 
 ## Expected Outputs
 

@@ -6,6 +6,15 @@ This repository contains all assignments and the main project for TIES4200 (Inde
 
 ## Setup
 
+### Option A: Conda (recommended)
+
+```bash
+./setup_conda.sh
+python -m nltk.downloader punkt punkt_tab gutenberg
+```
+
+### Option B: venv
+
 ```bash
 python -m venv .venv
 ```
@@ -24,7 +33,7 @@ Install dependencies and NLTK resources:
 
 ```bash
 pip install -r requirements.txt
-python -m nltk.downloader punkt gutenberg
+python -m nltk.downloader punkt punkt_tab gutenberg
 ```
 
 ## Run Assignment 1

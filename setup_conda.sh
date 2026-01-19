@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ENV_NAME="ties4200-nlp"
+ENV_NAME="nlp"
 PY_VERSION="3.10"
 
 if ! command -v conda >/dev/null 2>&1; then

@@ -10,7 +10,7 @@ def load_gutenberg_text(file_id: str = "austen-emma.txt") -> Optional[str]:
     Returns the raw text string, or None if resources are missing.
     """
     try:
-        return gutenberg.raw(file_id)
+        return gutenberg.raw(file_id) # type: ignore
     except LookupError:
         print(
             "NLTK data not found. Please run: "
