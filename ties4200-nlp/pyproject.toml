@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ties4200-nlp"
+version = "0.1.0"
+description = "Coursework for TIES4200 NLP"
+requires-python = ">=3.10"
+authors = [{ name = "Hassan Mehdi" }]
+dependencies = ["numpy", "nltk"]
