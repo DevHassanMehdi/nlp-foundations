@@ -51,7 +51,7 @@ def vectorize_counts(token_lists: List[List[str]], vocab: Dict[str, int]) -> Tup
         values = [counts[idx] for idx in indices]
         indices_list.append(indices)
         counts_list.append(values)
-    return indices_list, counts_list
+    return indices_list, counts_list # type: ignore
 
 
 def to_dense(
