@@ -76,3 +76,23 @@ Key modules for Assignment 1 live under `assignments/A1_foundations/src/`:
 6) Compute corpus statistics for full and train splits.
 7) Evaluate cross-entropy and perplexity (unigram, bigram unsmoothed, bigram add-k).
 8) Write results to `assignments/A1_foundations/outputs/`.
+
+## Assignment 2 Code Overview
+
+Key modules for Assignment 2 live under `assignments/A2_text_classification/src/`:
+
+- `load_data.py`: Loads NLTK `movie_reviews` as text/label pairs.
+- `preprocess.py`: Tokenization, punctuation filtering, vocabulary building, and count vectorization.
+- `models.py`: Multinomial Naive Bayes and Logistic Regression from scratch.
+- `evaluate.py`: Train/test split and classification metrics (accuracy, precision, recall, F1).
+- `utils.py`: Reproducibility and IO helpers (seed, JSON/Markdown saves).
+- `run_all.py`: Orchestrates the end-to-end classification experiment and writes outputs.
+
+## Assignment 2 Pipeline Summary
+
+1) Load movie reviews from NLTK.
+2) Split into train/test sets.
+3) Tokenize and build a vocabulary from training data.
+4) Vectorize documents as bag-of-words counts.
+5) Train Naive Bayes and Logistic Regression models.
+6) Evaluate metrics and write results to `assignments/A2_text_classification/outputs/`.

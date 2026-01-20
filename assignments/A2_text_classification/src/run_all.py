@@ -64,8 +64,8 @@ def main() -> None:
     train_indices, train_counts = vectorize_counts(train_tokens, vocab)
     test_indices, test_counts = vectorize_counts(test_tokens, vocab)
 
-    X_train = np.array(to_dense(train_indices, train_counts, len(vocab)))
-    X_test = np.array(to_dense(test_indices, test_counts, len(vocab)))
+    X_train = np.array(to_dense(train_indices, train_counts, len(vocab))) # type: ignore
+    X_test = np.array(to_dense(test_indices, test_counts, len(vocab))) # type: ignore
 
     nb = MultinomialNB(alpha=args.alpha)
     nb.fit(X_train, train_labels)
