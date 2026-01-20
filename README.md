@@ -45,6 +45,16 @@ python -m assignments.A1_foundations.src.run_all
 
 Outputs are written to `assignments/A1_foundations/outputs/`.
 
+## Run Assignment 2
+
+```bash
+python -m nltk.downloader punkt punkt_tab movie_reviews
+python -m assignments.A2_text_classification.src.run_all --help
+python -m assignments.A2_text_classification.src.run_all
+```
+
+Outputs are written to `assignments/A2_text_classification/outputs/`.
+
 ## Assignment 1 Code Overview
 
 Key modules for Assignment 1 live under `assignments/A1_foundations/src/`:
