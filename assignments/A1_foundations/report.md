@@ -2,8 +2,22 @@
 
 ## Goal
 
-Implement a basic NLP pipeline covering tokenization, corpus statistics, and
-unigram/bigram language modeling with evaluation via cross-entropy and perplexity.
+Build a minimal end-to-end NLP pipeline that mirrors the core concepts in
+Jurafsky & Martin Chapters 2–3. The assignment is designed to move from raw
+text to measurable language model performance so the trade-offs between
+tokenization, sparsity, and smoothing are concrete and reproducible.
+
+Specifically, the purpose is to:
+- Practice tokenization and corpus statistics as a foundation for modeling.
+- Implement unigram and bigram models from counts, without external LM tools.
+- Evaluate models using cross-entropy and perplexity on a held-out test set.
+- Observe how smoothing affects probability estimates and evaluation.
+
+What I did:
+- Loaded a public-domain text from NLTK Gutenberg (`austen-emma.txt`).
+- Tokenized, lowercased, filtered punctuation, and kept sentence boundaries.
+- Built unigram and bigram counts with `<UNK>` handling and `<s>` starts.
+- Ran train/test split, evaluated cross-entropy and perplexity, and recorded results.
 
 ## Data
 
