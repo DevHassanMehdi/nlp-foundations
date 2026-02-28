@@ -65,6 +65,15 @@ python -m assignments.A3_embeddings.src.run_all
 
 Outputs are written to `assignments/A3_embeddings/outputs/`.
 
+## Run Assignment 4
+
+```bash
+python -m assignments.A4_transformer_finetune.src.run_all --help
+python -m assignments.A4_transformer_finetune.src.run_all
+```
+
+Outputs are written to `assignments/A4_transformer_finetune/outputs/`.
+
 ## Assignment 1 Code Overview
 
 Key modules for Assignment 1 live under `assignments/A1_foundations/src/`:
@@ -127,3 +136,18 @@ Key modules for Assignment 3 live under `assignments/A3_embeddings/src/`:
 4) Compute similarities and nearest neighbors.
 5) Export PCA coordinates for visualization.
 6) Write outputs to `assignments/A3_embeddings/outputs/`.
+
+## Assignment 4 Code Overview
+
+Key modules for Assignment 4 live under `assignments/A4_transformer_finetune/src/`:
+
+- `run_all.py`: Loads SST-2, tokenizes, fine-tunes a transformer, and evaluates metrics.
+- `utils.py`: Minimal IO helpers for outputs.
+
+## Assignment 4 Pipeline Summary
+
+1) Load SST-2 dataset from GLUE via HuggingFace Datasets.
+2) Tokenize sentences with a pretrained transformer tokenizer.
+3) Fine-tune a sequence classification model (DistilBERT by default).
+4) Evaluate accuracy, precision, recall, and F1.
+5) Write outputs to `assignments/A4_transformer_finetune/outputs/`.
