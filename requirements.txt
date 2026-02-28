@@ -1,3 +1,7 @@
 numpy
 nltk
 gensim
+torch
+transformers
+datasets
+accelerate
