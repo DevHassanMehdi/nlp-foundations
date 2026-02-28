@@ -55,6 +55,16 @@ python -m assignments.A2_text_classification.src.run_all
 
 Outputs are written to `assignments/A2_text_classification/outputs/`.
 
+## Run Assignment 3
+
+```bash
+python -m nltk.downloader punkt punkt_tab gutenberg
+python -m assignments.A3_embeddings.src.run_all --help
+python -m assignments.A3_embeddings.src.run_all
+```
+
+Outputs are written to `assignments/A3_embeddings/outputs/`.
+
 ## Assignment 1 Code Overview
 
 Key modules for Assignment 1 live under `assignments/A1_foundations/src/`:
@@ -96,3 +106,24 @@ Key modules for Assignment 2 live under `assignments/A2_text_classification/src/
 4) Vectorize documents as bag-of-words counts.
 5) Train Naive Bayes and Logistic Regression models.
 6) Evaluate metrics and write results to `assignments/A2_text_classification/outputs/`.
+
+## Assignment 3 Code Overview
+
+Key modules for Assignment 3 live under `assignments/A3_embeddings/src/`:
+
+- `load_data.py`: Loads Gutenberg text for training embeddings.
+- `preprocess.py`: Tokenization, punctuation filtering, and sentence splitting.
+- `train_embeddings.py`: Trains a Word2Vec model with configurable hyperparameters.
+- `evaluate.py`: Computes word-pair similarities and nearest neighbors.
+- `visualize.py`: PCA-based 2D projection for visualization.
+- `utils.py`: Reproducibility and IO helpers (seed, JSON/Markdown saves).
+- `run_all.py`: Runs the pipeline and saves outputs to disk.
+
+## Assignment 3 Pipeline Summary
+
+1) Load raw text from Gutenberg.
+2) Tokenize and split into sentences.
+3) Train Word2Vec embeddings.
+4) Compute similarities and nearest neighbors.
+5) Export PCA coordinates for visualization.
+6) Write outputs to `assignments/A3_embeddings/outputs/`.

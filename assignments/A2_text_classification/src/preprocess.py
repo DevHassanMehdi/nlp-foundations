@@ -54,7 +54,6 @@ def vectorize_counts(token_lists: List[List[str]], vocab: Dict[str, int]) -> Tup
     return indices_list, counts_list # type: ignore
 
 
-
 def to_dense(
     indices_list: List[List[int]], counts_list: List[List[int]], vocab_size: int
 ) -> List[List[float]]:
