@@ -5,3 +5,6 @@ torch
 transformers
 datasets
 accelerate
+fastapi
+uvicorn
+scikit-learn

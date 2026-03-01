@@ -74,6 +74,49 @@ python -m assignments.A4_transformer_finetune.src.run_all
 
 Outputs are written to `assignments/A4_transformer_finetune/outputs/`.
 
+## Project: Sentiment Live Demo
+
+Local web demo comparing a classic TF‑IDF + Logistic Regression pipeline with a transformer sentiment model.
+
+Backend:
+
+```bash
+python -m uvicorn project.sentiment_live.backend.app.main:app --reload
+```
+
+Frontend:
+
+```bash
+cd project/sentiment_live/frontend
+npm install
+npm run dev
+```
+
+## Project: Episode Generator
+
+Train two generation models from scratch (word‑level n‑gram and char‑level LSTM) and compare their outputs in a live demo.
+
+```bash
+python -m nltk.downloader punkt punkt_tab gutenberg
+python -m project.episode_generator.scripts.data_prep
+python -m project.episode_generator.scripts.train_ngram
+python -m project.episode_generator.scripts.train_char_rnn
+```
+
+Backend:
+
+```bash
+python -m uvicorn project.episode_generator.backend.app.main:app --reload
+```
+
+Frontend:
+
+```bash
+cd project/episode_generator/frontend
+npm install
+npm run dev
+```
+
 ## Assignment 1 Code Overview
 
 Key modules for Assignment 1 live under `assignments/A1_foundations/src/`:

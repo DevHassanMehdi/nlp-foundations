@@ -2,6 +2,11 @@
 __pycache__/
 .pytest_cache/
 .DS_Store
+node_modules/
+**/dist/
+project/episode_generator/models/*.pt
+project/episode_generator/models/*.json
+project/episode_generator/data/*.txt
 
 **/outputs/*.png
 **/outputs/*.json
